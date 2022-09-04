@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PIZZERIA.Models;
+using PIZZERIA.Data;
 
 namespace PIZZERIA.Controllers
 {
@@ -13,10 +14,12 @@ namespace PIZZERIA.Controllers
     public class ContactoController : Controller
     {
         private readonly ILogger<ContactoController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public ContactoController(ILogger<ContactoController> logger)
+        public ContactoController(ILogger<ContactoController> logger,ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -24,10 +27,11 @@ namespace PIZZERIA.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Enviar(Contacto objContacto)
+        public async Task<IActionResult> Enviar(Contacto objContacto)
         {
-            ViewData["Message"] ="Se envio satisfactoriamente tu comentario";
-            return View("Index");
+            _context.Add(objContacto);
+            _context.SaveChanges();
+                    return View("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
