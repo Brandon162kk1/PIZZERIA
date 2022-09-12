@@ -1,23 +1,23 @@
 @model PIZZERIA.Models.Producto
 @{
-    ViewData["Title"] = "Detalles del Producto";
+    ViewData["Title"] = "Información de la Pizza";
 }
 
-    <h1>Details</h1>
+    <h1><marquee>@ViewData["Title"]</marquee></h1>
     <div class="container">
             <div class="col-sm-4">
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="card-img-actions">
-                    <img class="img-responsive" width="96" height="150"
+                    <img class="img-responsive" width="200" height="200"
                        src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)"  />
                   </div>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                   <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
-                  <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Add</a>
+                  <h5 class="card-title">Precio: S/@Html.DisplayFor(model => model.Precio)</h5>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Añadir</a>
                 </div>
               </div>
             </div>
