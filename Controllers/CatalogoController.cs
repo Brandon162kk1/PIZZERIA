@@ -47,7 +47,7 @@ namespace PIZZERIA.Controllers
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User); //sesion
             if(userID == null){
-                ViewData["Message"] = "Por favor debe iniciar sessión antes de agregar un producto";
+                ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
                 List<Producto> productos = new List<Producto>();
                 return  View("Index",productos);
             }else{
