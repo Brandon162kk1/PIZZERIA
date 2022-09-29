@@ -1,17 +1,14 @@
 @model PIZZERIA.Models.Producto
 @{
-    ViewData["Title"] = "Información";
-    ViewData["title2"] = "Completa";
+    ViewData["Title"] = "Detalles";
 }
 
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-         <div class="card" style="border-radius: 20px; height: 420px;">
+         <div class="card" style="border-radius: 20px; height: 340px;">
           <div class="card-body" style="margin: auto auto;">
             <div class="card-img-actions">
-              <h1 class="card-title" style="text-align: center;">@Html.DisplayFor(model => model.Name)</h1>
-              <br>
               <img class="img-responsive" width="310" height="310"
                 src="/Images/@Html.DisplayFor(model => model.ImageName)"
                 alt="@Html.DisplayFor(model => model.ImageName)" style="border-radius: 20px;" />
@@ -22,7 +19,7 @@
         <div class="col-sm-4">
          <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
           <div class="card-body">
-            <h1 style="text-align: center;">@ViewData["Title"]</h1>
+            <h1 class="card-title">@Html.DisplayFor(model => model.Name)</h1>
             <h5>Insumos:</h5>
             <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
             <h5>Precio:</h5>
@@ -33,7 +30,7 @@
        <div class="col-sm-4">
          <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
           <div class="card-body">
-            <h1 style="text-align: center;">@ViewData["Title2"]</h1>
+            <h1 style="text-align: center;">@ViewData["Title"]</h1>
             <h5>Seleccione:</h5>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -44,19 +41,20 @@
               <label class="form-check-label" for="defaultCheck2">Martes y Jueves(2x1)</label>
             </div>
             <h5>Cantidad:</h5>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Elige">
-            <datalist id="datalistOptions">
-             <option value="1">
-             <option value="2">
-             <option value="3">
-             <option value="4">
-             <option value="5">
-            </datalist>
+            <nav aria-label="Page navigation example">
+             <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                 <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+             </ul>
+            </nav>
             <h5>Nota:</h5>
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
-              <label for="floatingTextarea">Ejemplo: La corteza dorada</label>
-            </div>
+            <textarea placeholder="Ejm: Corteza Dorada"class="form-control" ></textarea>
             <br>
             <div class="d-grid gap-2">
                     <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir</a>
