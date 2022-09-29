@@ -17,6 +17,10 @@ namespace PIZZERIA.Models
         public int Cantidad { get; set; }
 
         public Decimal Precio { get; set; }
+
+        public String? Tipo {get; set;}
+
+        public String? Nota {get; set; }
         public String Status { get; set; } ="PENDIENTE";
     }
 }
