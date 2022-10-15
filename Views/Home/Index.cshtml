@@ -1,8 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="height:100%">
+        <div class="carousel-item active">
+            <img src="/Images/cabecera.jpg" class="d-block w-100" alt="prueba 1" style="height:500px">
+        </div>
+        <div class="carousel-item">
+            <img src="/Images/cabecera2.png" class="d-block w-100" alt="prueba 2" style="height:500px">
+        </div>
+        <div class="carousel-item">
+            <img src="/Images/cabecera3.png" class="d-block w-100" alt="prueba 3" style="height:500px">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div id="infoMenu" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, neque magnam non laboriosam explicabo
+                veritatis voluptatem vitae vero cumque perferendis nisi recusandae harum. Molestias dolor est, quia
+                illum quam nostrum?</p>
+        </div>
+        <div class="col-md-6">
+            <img src="/Images/especial.jpg" alt="prueba 4" class="img-responsive" width="200" height="200">
+        </div>
+    </div>
 </div>
