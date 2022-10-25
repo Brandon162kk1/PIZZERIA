@@ -15,48 +15,4 @@ html {
 
 body {
   margin-bottom: 60px;
-  background: url("/Images/background.jpg");
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no repeat;
 }
-
-#carta {
-  background-color: bisque;
-}
-
-#infoMenu {
-  margin-top: 30px;
-
- border-radius:20px;
- box-shadow: 0 0 15px rgb(19, 19, 19);
- background: rgb(255, 255, 255);
-}
-
-#mensajeIndex {
-  padding-left: 50px;
-  padding-inline: 20px;
-  font-size: auto;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-#carouselExampleControls
-{
-  border-radius:20px;
-  border-image: 20px;
-  box-shadow: 0 0 15px rgb(19, 19, 19);
-}
-
-#contentPrincipal{
-  padding: 0px;
-}
-
-#contentIndex1{
-  padding: 0;
-  border-radius: 20px 0px 0px 20px;
-  }
-
-#contentIndex2{
-  padding: 0;
-    border-radius: 0px 20px 20px 0px;
-  }

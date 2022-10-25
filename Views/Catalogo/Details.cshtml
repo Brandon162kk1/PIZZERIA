@@ -3,7 +3,7 @@
     ViewData["Title"] = "Información de la Pizza";
 }
 
-    <h1><marquee>@ViewData["Title"]</marquee></h1>
+<h1><marquee>@ViewData["Title"]</marquee></h1>
     <div class="container">
       <div class="row">
             <div class="col-sm-5">
@@ -25,19 +25,13 @@
             <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
             <h5>Precio:</h5>
             <p class="card-title">S/. @Html.DisplayFor(model => model.Precio)</p>
-            <h5>Seleccione:</h5>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">Familiar</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-              <label class="form-check-label" for="defaultCheck2">Martes y Jueves(2x1)</label>
-            </div>
             <br>
             <div class="d-grid gap-2">
-                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir</a>
-            </div>
+              <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Añadir</a>
+            </div><br>
+            <div class="d-grid gap-2">
+              <a class="btn btn-light" asp-action="Index" style="background-color:red; color:white;">Volver al catálogo</a>
+          </div>
           </div>
         </div>
       </div>
