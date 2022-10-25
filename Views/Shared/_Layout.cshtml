@@ -49,9 +49,27 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer style="background-color:white;" class="border-top footer text-muted ">
         <div class="container">
-            &copy; 2022 - PIZZERIA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="row">
+            <div class="col-md-3">
+            &copy; 2022 - PIZZERIA - <a asp-area="" asp-controller="Nosotros" asp-action="Index">Privacy</a>
+            </div>
+            <div class="col-md-3">
+                <a>Contáctanos:</a>
+                <a class="btn btn-success" style="background-color: #00bb2d; color:white;" href="" role="button">
+                <img src="/images/whatsapp.png" width="24px" heigh="24px"></i> Whatsapp</a>
+            </div>
+            <div class="col-md-3">
+                <a>Redes Sociales:</a>
+                <a class="btn btn-primary" style="background-color: #3b5998;" href="https://www.facebook.com/profile.php?id=100024665232556" role="button">
+                <img src="/images/facebook.png" width="25px" heigh="25px"></i>Facebook</a>
+                <a class="btn btn-light" style="background-color: white; color:black;" href="https://www.instagram.com/la_cuarentena01/?utm_medium=copy_link&fbclid=IwAR3_GLBWgJUTSdBE4ieSoptJ3Hn7zteJL8IN2IX99aOHdZxi-KHt8Oc3mQo" role="button">
+                <img src="/images/instagram.png" width="25px" heigh="25px"></i>Instagram</a>
+                <a class="btn btn-light" style="background-color: black; color:white;" href="" role="button">
+                <img src="/images/tiktok.jpg" width="25px" heigh="25px"></i>Tik-Tok</a>
+            </div>
+        </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
