@@ -4,7 +4,6 @@
 <div class="row">
     <div class="col-sm-4">
         <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
-            <p>foto1</p>
         </div>
     </div>
     <div class="col-sm-4">
@@ -23,13 +22,18 @@
             <label asp-for="Telefono" class="control-label"></label>
             <input asp-for="Telefono" class="form-control"  />
             <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <label asp-for="Comentario"></label>
+            <textarea asp-for="Comentario" class="form-control" ></textarea>
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button> 
+            </form></cetner>
         </div>
-        <label asp-for="Comentario"></label>
-        <textarea asp-for="Comentario" class="form-control" ></textarea>
-        <br>
-        <button type="submit" class="btn btn-primary">Enviar</button> 
-    </form>
-    <h1>@ViewData["Message"]</h1>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
+        </div>
+    </div>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
