@@ -12,25 +12,41 @@
 
 <a class="btn btn-primary" asp-controller="Pago" 
         asp-action="Create" asp-route-monto="@montoTotal">Pagar</a><p>Total S/. @montoTotal</p>
+<a class="btn btn-primary" asp-controller="Catalogo" asp-action="Index" style="">Seguir Comprando</a>
 
-<table class="table">
-    <thead>
+<div class="col-sm-8">
+<div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
+    <table class="table">
+        <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Producto.Name)
+                Imagen
             </th>
             <th>
-                @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Cantidad)
+                Producto
             </th>
             <th>
-                @Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Precio)
+                Cantidad
             </th>
-            <th></th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Sub-Total
+            </th>
+            <th>Detalles</th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (Proforma item in Model.elementosCarrito) {
+        </thead>
+        <tbody>
+        @foreach (Proforma item in Model.elementosCarrito) {
         <tr>
+            <td>
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="60" height="60"src="/images/@item.Producto.ImageName" alt="@item.Producto.ImageName"  />
+                  </div>
+                </div>
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Producto.Name)
             </td>
@@ -41,10 +57,15 @@
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
-                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                --
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('¿Desea eliminar el ítem del carrito?')">Eliminar</a>
             </td>
         </tr>
-}
-    </tbody>
-</table>
+        }
+        </tbody>
+    </table>
+    </div>
+    </div>
