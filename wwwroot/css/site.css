@@ -4,6 +4,10 @@
   }
 }
 
+h1{
+  color: white;
+  text-align: center;
+}
 html {
   position: relative;
   min-height: 100%;
@@ -12,14 +16,16 @@ html {
 
 body {
   margin-bottom: 60px;
-  background: url("/Images/background.jpg");
+  background: url("/Images/fondo_web.jpg");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no repeat;
 }
 
 #carta {
-  background-color: bisque;
+  background-color: rgb(247, 211, 145);
+  border-radius: 20px; 
+  padding: 1rem 1rem;
 }
 
 #infoMenu {
@@ -41,7 +47,7 @@ body {
 {
   border-radius:20px;
   border-image: 20px;
-  box-shadow: 0 0 15px rgb(19, 19, 19);
+  box-shadow: 0 0 30px rgb(255, 153, 0);
 }
 
 #contentPrincipal{
@@ -121,6 +127,9 @@ body {
     transform: translate3d(0, 0, 0);
   }
   header{
+    background-color: white;
+  }
+  footer{
     background-color: white;
   }
   
