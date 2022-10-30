@@ -32,7 +32,7 @@ namespace PIZZERIA.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Enviar(Contacto objContacto)
+        public IActionResult Enviar(Contacto objContacto)
         {
             var userID = _userManager.GetUserName(User);
             if(userID == null){
