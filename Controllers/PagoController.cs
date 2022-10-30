@@ -28,7 +28,7 @@ namespace PIZZERIA.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(_context.DataPago.ToList());
         }
 
         public IActionResult Create(Decimal monto)
