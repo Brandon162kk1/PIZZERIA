@@ -1,0 +1,9 @@
+GET https://localhost:7110/api/producto HTTP/1.1
+Accept: application/json
+
+GET https://gorest.co.in/public/v2/users HTTP/1.1
+
+POST https://gorest.co.in/public/v2/users HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer cbcc8a78fc4628d3817795de40fe546fb8240f48cc6b835403077ca6d261c043
