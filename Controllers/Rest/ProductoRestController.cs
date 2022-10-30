@@ -28,6 +28,20 @@ namespace PIZZERIA.Controllers.Rest
              return listProductos.ToArray();
         }
 
+        [HttpGet("{id}")]
+        public Producto GetProduct(int? id)
+        {
+            var producto =  _context.DataProductos.Find(id);
+            return producto;
+        }
+
+        [HttpPost]
+        public Producto CreateProduct(Producto producto){
+            _context.Add(producto);
+            _context.SaveChanges();
+            return producto;
+        }
+
 
     }
 }
