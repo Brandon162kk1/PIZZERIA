@@ -6,6 +6,7 @@
     IEnumerable<PIZZERIA.Models.Proforma> listItemsCarrito = new List<Proforma>();
     listItemsCarrito = @Model.elementosCarrito;
     Decimal montoTotal = @Model.montoTotal;
+    <script src="~/js/site.js" asp-append-version="true"></script>
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -60,7 +61,7 @@
             </td>
             <td>
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
-                <a class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('¿Desea eliminar el ítem del carrito?')">Eliminar</a>
+                <a class="btn btn-info" asp-action="Delete" asp-route-id="@item.Id" onclick="confirmacion();">Eliminar</a>
             </td>
         </tr>
         }

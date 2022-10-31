@@ -52,7 +52,6 @@ namespace PIZZERIA.Controllers
                 return  View("Index",productos);
             }else{
                 var producto = await _context.DataProductos.FindAsync(id);
-
                 Proforma proforma = new Proforma();
                 proforma.Producto = producto;
                 proforma.Precio = producto.Precio; //precio del producto en ese momento
