@@ -1,14 +1,16 @@
 @model PIZZERIA.Models.Pago
 @{
-    ViewData["Title"] = "Pago";
+    ViewData["Title"] = "Realiza tu Pago";
 }
 
 <h1>@ViewData["Title"]</h1>
-
+<form asp-controller="Proforma" asp-action="Index">
+  <button type="submit" class="btn btn-primary"><-- Retrocede</button>
+</form>
     <div class="container">
-
         <div class="row">
-          <div class="col-sm-10 mt-5">
+          <div class="col-sm-15 mt-5">
+          <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 300px;">
            <form asp-controller="Pago" asp-action="Pagar">
               <div class="form-group row">
                 <input type="hidden" asp-for="UserID"/>
@@ -58,7 +60,8 @@
                 </div>
               </div>
             </form>
+            </div>
             <h1>@ViewData["Message"]</h1>
           </div>
         </div>
-    </div
+    </div>

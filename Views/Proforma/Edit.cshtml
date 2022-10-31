@@ -1,16 +1,15 @@
 @model PIZZERIA.Models.Proforma
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edita la cantidad de tu Pedido";
 }
 
-<h1>Edit</h1>
-
-<h4>Proforma</h4>
-<hr />
+<h1>@ViewData["Title"]</h1>
+<hr/>   
 <div class="row">
-    <div class="col-md-4">
-        <form asp-controller="Proforma" asp-action="Edit">
+    <div class="col-sm-4">
+        <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 150px;">
+            <form asp-controller="Proforma" asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="UserID" />
@@ -24,10 +23,10 @@
                 <input type="submit" value="Guardar Cambios" class="btn btn-primary"/>
                 <input type="submit" asp-action="Index" value="Regresar" class="btn btn-info"/>
             </div>
-        </form>
+            </form> 
+        </div>
     </div>
-</div>
-
+</div>    
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
