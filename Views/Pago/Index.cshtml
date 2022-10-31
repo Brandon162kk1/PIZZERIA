@@ -1,7 +1,7 @@
 @model IEnumerable<PIZZERIA.Models.Pago>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Registro de Pagos";
     var count = 1;
 }
 
@@ -9,17 +9,17 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">
-                        №
+                №
              </th>
              <th scope="col">
-                 @Html.DisplayNameFor(model => model.UserID)
+                Usuario
              </th>
              <th scope="col">
-                  @Html.DisplayNameFor(model => model.PaymentDate)
+                Fecha y Hora
              </th>
 
               <th scope="col">
-                 @Html.DisplayNameFor(model => model.MontoTotal)
+                Monto Total
               </th>
               <th></th>
         </tr>
@@ -28,17 +28,17 @@
 @foreach (var item in Model) {
         <tr>
            <th scope="row">
-                    @count
+                @count
             </th>
             <td>
-                 @Html.DisplayFor(modelItem => item.UserID)
+                @Html.DisplayFor(modelItem => item.UserID)
             </td>
             <td>
-               @Html.DisplayFor(modelItem => item.PaymentDate)
+                @Html.DisplayFor(modelItem => item.PaymentDate)
             </td>                
             <td>
-                  S/. @Html.DisplayFor(modelItem => item.MontoTotal)
-                </td>
+                S/. @Html.DisplayFor(modelItem => item.MontoTotal)
+            </td>
             <td>             
                 <!--
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>

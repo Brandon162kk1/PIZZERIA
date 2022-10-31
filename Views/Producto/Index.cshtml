@@ -1,19 +1,19 @@
 @model IEnumerable<PIZZERIA.Models.Producto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Personaliza tu Producto";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h1>@ViewData["Title"]</h1>
+<a class="btn btn-primary" asp-action="Create">Crear Prodcuto</a>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Imagen
+            </th>
+            <th>
+                Nombre
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
@@ -22,20 +22,22 @@
                 @Html.DisplayNameFor(model => model.Precio)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PorcentajeDescuento)
+                Porcentaje
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImageName)
+                Estado
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
+                Opciones
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -43,21 +45,23 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Precio)
+                S/.@Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PorcentajeDescuento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImageName)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Editar</a></li>
+                    <li><a  class="dropdown-item" asp-action="Details" asp-route-id="@item.Id">Ver detalles</a></li>
+                    <li><a  class="dropdown-item" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a></li>
+                </ul>
+                </div>     
             </td>
         </tr>
 }
