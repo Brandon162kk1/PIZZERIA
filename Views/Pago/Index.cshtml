@@ -7,7 +7,7 @@
 <div class="d-grid gap-2">        
     <a class="btn btn-success" asp-action="ExportarExcel">GENERAR REPORTE EXCEL</a>
 </div><br>
-<form  asp-action="ListarPedidos" class="row g-3">
+<form  asp-action="" class="row g-3">
   <div class="col-auto">
     <label>Usuario:</label>
     <input type="email" class="form-control" name="usuario" placeholder="example@gmail.com">
@@ -58,10 +58,8 @@
             <td>
                 S/. @Html.DisplayFor(modelItem => item.MontoTotal)
             </td>
-            <td>             
-                <!--
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a>
-                -->
+            <td>          
+                <!--<a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Eliminar</a> -->
             </td>
         </tr>
         count++;
