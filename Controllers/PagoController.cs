@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
-
 using PIZZERIA.Data;
 using PIZZERIA.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
 using Rotativa.AspNetCore;
+
 namespace PIZZERIA.Controllers
 {
     public class PagoController : Controller
@@ -112,6 +113,7 @@ namespace PIZZERIA.Controllers
                 return File(libro.GetAsByteArray(), excelContentType, "Pagos.xlsx");
             }
         }
+
 
     }
 }

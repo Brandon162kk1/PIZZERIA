@@ -13,8 +13,7 @@
 
 <div class="container">
     <div class="row">
-
-        <div class="col-sm-9">
+        <div class="col-sm-8">
         <div class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
     <table class="table">
         <thead>
@@ -57,7 +56,7 @@
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
-                --
+                @(item.Precio * item.Cantidad)
             </td>
             <td>
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
@@ -69,13 +68,13 @@
     </table>
     </div>
     </div>
-    <div class="col-sm-3">
-        <div class="card" style="border-radius: 20px; height: 420px;">
+    <div class="col-sm-4">
+        <div class="card" style="border-radius: 20px; height: 140px;">
           <div class="card-body" style="margin: auto auto;">
             <div class="card-img-actions">
-                <a class="btn btn-primary" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal">Pagar</a>
                 <h2 style="text-align: left;">Total S/. @montoTotal</h2>
-                <a class="btn btn-primary" asp-controller="Catalogo" asp-action="Index" style="">Seguir Comprando</a>
+                <a class="btn btn-primary" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal"><img src="/Images/mastercard.png" class="img-fluid" alt="" width="20px" heigh="20px">Pagar</a>
+                <a class="btn btn-info" asp-controller="Catalogo" asp-action="Index" style=""><img src="/Images/carrito1.png" class="img-fluid" alt="" width="20px" heigh="20px">Seguir Comprando</a>
             </div>
           </div>
         </div>
