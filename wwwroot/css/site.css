@@ -8,6 +8,15 @@ h1{
   /*color: white;*/
   text-align: center;
 }
+
+/*
+td{
+  color: white;
+}
+th{
+  color: white;
+}*/
+
 html {
   position: relative;
   min-height: 100%;
@@ -17,13 +26,17 @@ html {
 body {
   margin-bottom: 60px;
   /*background: url("/Images/fondo_web.jpg");*/
+  /*background: url("/Images/fondoo.webp");*/
+  /*background-color: rgb(248, 221, 171);*/
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no repeat;
 }
 
 #carta {
-  background-color: rgb(247, 211, 145);
+  /*background-color: rgb(247, 211, 145);*//*en blanco*/
+  /*background: url("/Images/fondo_web.jpg");*/
+  /*background: url("/Images/fondoo.webp");*/
   border-radius: 20px; 
   padding: 1rem 1rem;
 }
@@ -64,7 +77,7 @@ body {
     border-radius: 0px 20px 20px 0px;
   }
   #portfolio {
-    background: rgb(243, 188, 87);
+    /*background: rgb(243, 188, 87);*/
     padding: 20px 0;
   }
   
@@ -79,6 +92,7 @@ body {
     overflow: hidden;
     margin-bottom: 30px;
     text-decoration: none;
+    border-radius: 20px;
   }
   
   #portfolio .portfolio-item .details {

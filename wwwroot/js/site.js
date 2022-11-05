@@ -5,8 +5,3 @@
 function agregacion() {  
     alert("Se agregó un nuevo producto a tu carrito");
 }
-
-function confirmacion() {
-    //Ingresamos un mensaje
-    var mensaje = confirm("¿Desea eliminar el ítem del carrito?");
-}
