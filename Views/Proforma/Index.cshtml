@@ -7,6 +7,7 @@
     listItemsCarrito = @Model.elementosCarrito;
     Decimal montoTotal = @Model.montoTotal;
     <script src="~/js/site.js" asp-append-version="true"></script>
+    Decimal igv = (18*@montoTotal)/100, del = 3, res=(montoTotal-igv),mtF=(@montoTotal+del);
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -69,12 +70,17 @@
     </div>
     </div>
     <div class="col-sm-4">
-        <div class="card" style="border-radius: 20px; height: 140px;">
+        <div class="card" style="border-radius: 20px; height: 256px;">
           <div class="card-body" style="margin: auto auto;">
             <div class="card-img-actions">
-                <h2 style="text-align: left;">Total S/. @montoTotal</h2>
-                <a class="btn btn-primary" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal"><img src="/Images/mastercard.png" class="img-fluid" alt="" width="20px" heigh="20px">Pagar</a>
+                <center><h2>Detalles:</h2>
+                <p>Cargo por delivery : </h2>S/ @del</p>
+                <p>IGV(18%): </h2>S/ @igv</p>
+                <p>Restante: </h2>S/ @res</p>
+                <h2>Total S/. @mtF</h2>
+                <a class="btn btn-primary" asp-controller="Pago" asp-action="Create" asp-route-monto="@mtF"><img src="/Images/mastercard.png" class="img-fluid" alt="" width="20px" heigh="20px">Pagar</a>
                 <a class="btn btn-info" asp-controller="Catalogo" asp-action="Index" style=""><img src="/Images/carrito1.png" class="img-fluid" alt="" width="20px" heigh="20px">Seguir Comprando</a>
+            </center>
             </div>
           </div>
         </div>

@@ -69,13 +69,13 @@ body {
 
 #contentIndex1{
   padding: 0;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 20px 20px 20px;
   }
 
 #contentIndex2{
   padding: 0;
-    border-radius: 0px 20px 20px 0px;
-  }
+  border-radius: 0px 20px 20px 0px;
+}
   #portfolio {
     /*background: rgb(243, 188, 87);*/
     padding: 20px 0;
