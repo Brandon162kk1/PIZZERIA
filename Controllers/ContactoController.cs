@@ -31,6 +31,11 @@ namespace PIZZERIA.Controllers
         {
             return View();
         }
+
+        public IActionResult Consultas()
+        {
+            return View(_context.DataContactos.ToList());
+        }
         [HttpPost]
         public IActionResult Enviar(Contacto objContacto)
         {

@@ -1,0 +1,50 @@
+@model IEnumerable<PIZZERIA.Models.Contacto>
+@{
+    ViewData["Title"] = "Consultas o Dudas";
+    var count = 1;
+}
+
+<h1><center>@ViewData["Title"]</center></h1>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">
+                №
+            </th>
+            <th scope="col">
+                Usuario
+            </th>
+            <th scope="col">
+                Correo Electronico
+            </th>
+            <th scope="col">
+                Celular
+            </th>
+            <th>
+                Comentario
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           <th scope="row">
+                @count
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>                
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+        </tr>
+        count++;
+}
+    </tbody>
+</table>
