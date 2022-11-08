@@ -4,13 +4,13 @@
     ViewData["Title"] = "Consultas Encontradas";
     var count = 1;
 }
+<h1><center>@ViewData["Title"]</center></h1>
 <form asp-controller="Consultas" asp-action="BuscarConsultas" method="GET">
     <div class="form-group row">
         <label class="control-label">Ingresar Usuario</label>
         <input type="email" name="usuario" class="form-control">
     </div>
 </form><br>
-<h1><center>@ViewData["Title"]</center></h1>
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
@@ -35,13 +35,13 @@
                 @count
             </th>
             <td>
-                @Html.DisplayFor(modelItem => item.UserID)
+                @item.UserID
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @item.Email
             </td>                
             <td>
-                @Html.DisplayFor(modelItem => item.Comentario)
+                @item.Comentario
             </td>
         </tr>
         count++;

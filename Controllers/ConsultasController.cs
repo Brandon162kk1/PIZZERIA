@@ -26,14 +26,14 @@ namespace PIZZERIA.Controllers
         {
             return View();
         }
-        public IActionResult BuscarConsultas(string email)
+        public IActionResult BuscarConsultas(string usuario)
         {   
             var lista = _context.DataConsulta.Include(p => p.Comentario).ToList();
 
             var query1 = lista;
 
-            if(email != null){
-                query1 = query1.Where(p => p.UserID.Contains(email)).ToList();
+            if(usuario != null){
+                query1 = query1.Where(p => p.UserID.Contains(usuario)).ToList();
             }
 
             var resultado = query1.ToList();
