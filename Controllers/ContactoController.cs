@@ -32,9 +32,9 @@ namespace PIZZERIA.Controllers
             return View();
         }
 
-        public IActionResult Consultas()
+        public async Task<IActionResult> Consultas()
         {
-            return View(_context.DataContactos.ToList());
+            return View(await _context.DataContactos.ToListAsync());
         }
         [HttpPost]
         public IActionResult Enviar(Contacto objContacto)

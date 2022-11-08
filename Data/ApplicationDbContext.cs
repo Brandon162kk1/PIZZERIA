@@ -17,6 +17,6 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Pago> DataPago { get; set; }
     public DbSet<Pedido> DataPedido { get; set; }
     public DbSet<DetallePedido> DataDetallePedido { get; set; }
+    public DbSet<Consultas> DataConsulta { get; set; }
 }
-
-    
+  

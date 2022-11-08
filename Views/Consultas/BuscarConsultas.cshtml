@@ -1,15 +1,16 @@
-@model IEnumerable<PIZZERIA.Models.Contacto>
+@model List<PIZZERIA.Models.Consultas>
+
 @{
-    ViewData["Title"] = "Consultas o Dudas";
+    ViewData["Title"] = "Consultas Encontradas";
     var count = 1;
 }
-<h1><center>@ViewData["Title"]</center></h1><br>
 <form asp-controller="Consultas" asp-action="BuscarConsultas" method="GET">
     <div class="form-group row">
         <label class="control-label">Ingresar Usuario</label>
         <input type="email" name="usuario" class="form-control">
     </div>
 </form><br>
+<h1><center>@ViewData["Title"]</center></h1>
 <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
@@ -21,9 +22,6 @@
             </th>
             <th scope="col">
                 Correo Electronico
-            </th>
-            <th scope="col">
-                Celular
             </th>
             <th>
                 Comentario
@@ -37,14 +35,11 @@
                 @count
             </th>
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
+                @Html.DisplayFor(modelItem => item.UserID)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>                
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Comentario)
             </td>
