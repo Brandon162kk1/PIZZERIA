@@ -82,7 +82,6 @@ namespace PIZZERIA.Controllers
 
             _context.SaveChanges();
 
-            ViewData["Message"] = "El pago se ha registrado correctamente!!!";
             return View("Create");
         }
 

@@ -19,8 +19,7 @@
       <div class="col-sm-7">
         <div id="carta" class="card" style="border-radius: 20px; padding: 1rem 1rem; height: 420px;">
           <div class="card-body">
-            <center>
-            <h2 class="card-title">@Html.DisplayFor(model => model.Name)</h2></center>
+            <h1 class="card-title">@Html.DisplayFor(model => model.Name)</h1>
             <h2>Insumos:</h2>
             <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
             <h2>Precio:</h2>
@@ -32,7 +31,6 @@
             <div class="d-grid gap-2">
               <a class="btn btn-outline-danger" asp-action="Index">Volver al catálogo</a>
             <div>
-            </center>
           </div>
           </div>
         </div>

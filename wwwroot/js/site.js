@@ -5,3 +5,6 @@
 function agregacion() {  
     alert("Se agregó un nuevo producto a tu carrito");
 }
+function pago() {  
+    alert("Se realizo la compra exitosamente");
+}

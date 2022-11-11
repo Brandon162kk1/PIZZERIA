@@ -8,7 +8,9 @@ h1{
   /*color: white;*/
   text-align: center;
 }
-
+table{
+  border-color: black;
+}
 /*
 td{
   color: white;
