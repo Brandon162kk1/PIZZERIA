@@ -26,7 +26,7 @@
             <p class="card-title">S/. @Html.DisplayFor(model => model.Precio)</p>
             <br>
             <div class="d-grid gap-2">
-              <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id" style="background-color:orange; color:white;"><img src="/Images/carrito1.png" class="img-fluid" alt="" width="20px" heigh="20px">Añadir</a>
+              <a class="btn btn-primary" asp-action="Add" onclick="agregacion();" asp-route-id="@Model.Id" style="background-color:orange; color:white;"><img src="/Images/carrito1.png" class="img-fluid" alt="" width="20px" heigh="20px">Añadir</a>
             </div><br>
             <div class="d-grid gap-2">
               <a class="btn btn-outline-danger" asp-action="Index">Volver al catálogo</a>
